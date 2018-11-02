@@ -1,0 +1,142 @@
+
+
+body{
+    margin :0;
+    padding : 0;
+
+}
+
+
+.pageLayout{
+    height : 100vh;
+    width: 100%;
+    position: fixed;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url("images/capture1.jpg") ;
+    background-repeat: no-repeat;
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(60deg);
+}
+
+.text{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #E9EBF1
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+/*
+.navbarList :: before{
+  display: none;
+}
+*/
+.navbarList ul{
+  font-size: 22px;
+  font-family: Trebuchet MS;
+  padding-top: 10%;
+  padding-right: 10%;
+  color: #E9EBF1;
+  display: block;
+  text-align: center;
+  border-bottom: 5px solid purple;
+}
+
+
+
+.navbarList{
+/*  width : 150px;
+  height : 100%;*/
+  left : 100 ;
+  background-color: #DDDCE0;
+  float : right;
+  /*background-image: linear-gradient(#AD0AAB,#4568DC, #B06AB3, #00A032);*/
+  background-image: radial-gradient(circle at bottom right, #AD0AAB,#4568DC, #B06AB3, #00A032);
+   /*linear-gradient(#4568DC, #B06AB3);*/  /*other option #FC466B, #3F5EFB)*/  /*linear-gradient(#AD0CFF, #00A032)*/
+  opacity : 0.5;
+
+
+}
+
+
+li {
+
+  display: block;
+  padding: 2px;
+}
+
+li a:hover{
+  /*background-color: #185a9d;
+  color : #43cea2;*/
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  -o-transition: background-color 300ms ease-out;  
+  transition: all 300ms ease-out;
+  background-color: #e0eafc; /*eef2f3*/
+  color : #4bc0c8;
+  opacity : 0.5;
+  cursor: pointer;
+}
+/*-all is specified so as to transition the elements in this specific css class.*/
+
+
+/*<div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+*/
+.collapsable-button{
+  background-image: url("images/nav-bar-icon.png");
+  float: right;
+  background-size: 30px;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  width:100px;
+  align-content: left;
+  cursor: pointer;
+/*  margin: -20px 65%;
+*/
+}
+
+/*
+.collapsable-button:hover::after{
+  display: none;
+}
+*/
+
+
+.collapsable-button.active{
+  left : 0%;
+  display :none;
+}
+
+
+/*.collapsable-button.active:  ~ .navbarList{
+  display :none;
+}
+*/
+
+
+
+
+
+/*
+.firstElement{
+    height : 100vh;
+    width: 100vw !important;
+    background-size: contain;
+    background-image: url("images/capture1.jpg"),url("images/Marble Texture_01.jpg"),url("images/Marble Texture_05.jpg") ;
+    background-repeat: no-repeat,  no-repeat, no-repeat;
+    background-position: left,center,right;
+     background : linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(160deg);
+
+    display: flex;
+} */
