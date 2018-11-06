@@ -50,16 +50,18 @@ ul{
 .navbarList{
 /*  width : 150px;
   height : 100%;*/
-  left : 100 ;
   background-color: #DDDCE0;
   float : right;
   /*background-image: linear-gradient(#AD0AAB,#4568DC, #B06AB3, #00A032);*/
   background-image: radial-gradient(circle at bottom right, #AD0AAB,#4568DC, #B06AB3, #00A032);
    /*linear-gradient(#4568DC, #B06AB3);*/  /*other option #FC466B, #3F5EFB)*/  /*linear-gradient(#AD0CFF, #00A032)*/
-  opacity : 0.5;
+  opacity : 0.7;
+  visibility: hidden;
 
 
 }
+
+
 
 
 li {
@@ -75,7 +77,7 @@ li a:hover{
   -moz-transition: background-color 300ms ease-out;
   -o-transition: background-color 300ms ease-out;  
   transition: all 300ms ease-out;
-  background-color: #e0eafc; /*eef2f3*/
+  /*background-color: #e0eafc; /*eef2f3*/*/
   color : #4bc0c8;
   opacity : 0.5;
   cursor: pointer;
@@ -88,32 +90,38 @@ li a:hover{
 .collapsable-button{
   background-image: url("images/nav-bar-icon.png");
   float: right;
-  background-size: 30px;
+  background-size: 35px;
   display: block;
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100px;
-  width:100px;
+  height: 50px;
+  width:50px;
   align-content: left;
   cursor: pointer;
+  visibility: visible;
+  opacity : 1;
 /*  margin: -20px 65%;
 */
 }
 
-/*
-.collapsable-button:hover::after{
-  display: none;
+.collapsable-button:hover{
+    background-color: #AB47BC;
+
 }
-*/
+
 
 
 .collapsable-button.active{
-  left : 0%;
   display :none;
 }
 
 
+
+/*.collapsable-button:hover{
+  left : 0%;
+  display :none;
+}*/
 /*.collapsable-button.active:  ~ .navbarList{
   display :none;
 }

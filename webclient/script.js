@@ -9,5 +9,7 @@ function onToggleMenu(){
 	var element =document.getElementsByClassName('collapsable-button');
 	for (var i = 0; i < element.length; i++) {
 		element[i].classList.toggle('active');
+		element[i].parentNode.style.visibility = "visible";
 	}
 }
+

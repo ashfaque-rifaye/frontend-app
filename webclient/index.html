@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY-APP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- VIEWPORT:  The viewport is the user's visible area of a web page...The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the webpage.
+                    Meaning no matter the width of the device you are on, whether on desktop or mobile, the website will follow the width of the device the user is on. -->
+  <!--  The first part, viewport is the users visible area of the web page. The viewport will vary between devices and be smaller on mobile. This meta tag basically helps let us take control of this viewport.
+          width=device-width sets the webpages width to the width of the device screen. initial-scale=1.0 sets the initial zoom level of the webpage when it's loaded.
+          Without this meta tag you would notice everything on a mobile would be very small and squeezed to fit the content to look the same as it does on a monitor.
+          But also the meta tag itself is a lot more than that. It is like information about your webpage and also helps with search engine optimisation for your webpage.-->
+
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <script src="script.js"></script>
 </head>
@@ -13,14 +20,15 @@
 <body>
 
     <div class="pageLayout"></div>
-      <div class="navbarList">
-              <div class="collapsable-button" onclick="onToggleMenu()">
+      <div class="navbarList" >
+        <div class="collapsable-button" onclick="onToggleMenu()" >
         
-      </div>
+        </div>
         <ul>
           <li><a>Home</a></li>
           <li><a>Sign Up/Login</a></li>
           <li><a>About Us</a></li>
+          <li><a>Blog</a></li>
           <li><a>Contact</a></li>
           <li><a>Edit Profile</a></li>
         </ul>
