@@ -15,8 +15,8 @@ body{
     background-position: bottom;
     background-image: url("images/capture1.jpg") ;
     background-repeat: no-repeat;
-    -webkit-filter: hue-rotate(180deg);
-    filter: hue-rotate(60deg);
+/*    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(60deg);*/
 }
 
 .text{
@@ -25,24 +25,22 @@ body{
   color: #E9EBF1
 }
 
-ul{
+/*ul{
     margin: 0;
     padding: 0;
-}
+}*/
 /*
 .navbarList :: before{
   display: none;
 }
 */
 .navbarList ul{
-  font-size: 22px;
+  font-size: 16px;
   font-family: Trebuchet MS;
-  padding-top: 10%;
-  padding-right: 10%;
-  color: #ffffff    ;
+  color: white;   
   display: block;
-  text-align: center;
-  border-bottom: 5px solid purple;
+  text-align: right;
+  margin-right: 10%;
 }
 
 
@@ -50,13 +48,17 @@ ul{
 .navbarList{
 /*  width : 150px;
   height : 100%;*/
-  background-color: #DDDCE0;
+  /*background-color: #DDDCE0;*/
   float : right;
   /*background-image: linear-gradient(#AD0AAB,#4568DC, #B06AB3, #00A032);*/
-  background-image: radial-gradient(circle at bottom right, #AD0AAB,#4568DC, #B06AB3, #00A032);
+  /*background-image: radial-gradient(circle at bottom right, #AD0AAB,#4568DC, #B06AB3, #00A032);*/
    /*linear-gradient(#4568DC, #B06AB3);*/  /*other option #FC466B, #3F5EFB)*/  /*linear-gradient(#AD0CFF, #00A032)*/
   opacity : 0.7;
+  width : 15%;
+  position: relative;
+  top: 10%;
   visibility: hidden;
+
 
 
 }
@@ -67,10 +69,15 @@ ul{
 li {
 
   display: block;
-  padding: 2px;
+  padding: 5%;
+
 }
 
-li a:hover{
+li a {
+  padding: 5px;
+}
+
+li a:hover {
   /*background-color: #185a9d;
   color : #43cea2;*/
   -webkit-transition: color 200ms ease-out;
@@ -90,14 +97,32 @@ li a.defaultSelect{
   opacity : 0.5;
 }
 
+
+li a.nav-menu{
+  background-image: url("images/nav-icon.png");
+  background-size: 28px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30%;
+  align-content: left;
+
+  visibility: visible;
+  padding-right: 26px;
+  padding-top: 16px;
+
+}
+
+
+
 /*<div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 */
 .collapsable-button{
-  background-image: url("images/nav-bar-icon.png");
+  background-image: url("images/nav-icon.png");
   float: right;
   background-size: 35px;
   display: block;
-  position: absolute;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   height: 50px;
@@ -117,12 +142,47 @@ li a.defaultSelect{
 
 
 
-.collapsable-button.active{
-  display :none;
+/*.nav-menu.active{
+  opacity: 0.5;
+}*/
+
+
+.login-form{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background: #ffffff;
+
+  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+  box-shadow: 0px 0px 10px 5px #ffffff;
+  transform: translate(50%,50%) ;
+
 }
 
+.login-form h2{
+  text-align: center;
+}
 
+.form-input{
+  padding: 10px 0px 0px 0px;
+}
 
+.material-icons.md-36 { 
+
+  font-size: 20px;
+  background: white;
+  padding : 5px;
+  border-radius: 30%;
+  color: rgba(26, 26, 26, 0.99);
+  cursor: pointer;
+
+}
+
+.material-icons.md-36 :hover{ 
+
+  opacity : 0.5;
+  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+}
 /*.collapsable-button:hover{
   left : 0%;
   display :none;

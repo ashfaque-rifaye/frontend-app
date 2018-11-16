@@ -14,28 +14,42 @@
           But also the meta tag itself is a lot more than that. It is like information about your webpage and also helps with search engine optimisation for your webpage.-->
 
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <script src="script.js"></script>
 </head>
 
 <body>
 
     <div class="pageLayout"></div>
+<!--       <div class="collapsable-button" onclick="onToggleMenu()" >
+      
+      </div> -->
       <div class="navbarList" >
-        <div class="collapsable-button" onclick="onToggleMenu()" >
-        
-        </div>
         <ul>
-          <li><a class = "defaultSelect">Home</a></li>
-          <li><a>Sign Up/Login</a></li>
-          <li><a>About Us</a></li>
-          <li><a>Blog</a></li>
-          <li><a>Contact</a></li>
-          <li><a>Edit Profile</a></li>
+          <li><a class = "nav-menu" onclick="onToggleMenu()"></a></li>
+          <li><a class = "defaultSelect">Home</a><i class="material-icons md-36">home</i></li>
+          <li><a>Login</a><i class="material-icons md-36">person</i></li>
+          <li><a>About Us</a><i class="material-icons md-36">work</i></li>
+          <li><a>Blog</a><i class="material-icons md-36">rss_feed</i></li>
+          <li><a>Contact</a><i class="material-icons md-36">library_books</i></a></li>
+          <li><a>Edit Profile</a><i class="material-icons md-36">edit</i></a></li>
         </ul>
       </div>
+  
+ <!--  <div class = "login-form">
+    <h2> Login </h2>
+    <div class = "form-input">
+      <input type="text" name="Email" placeholder="Email">
     </div>
-<!--   </div>
- -->
+    <div class = "form-input">
+      <input type="text" name="Password" placeholder="Password">
+    </div>  
+    <div class = "form-input">
+      <input type="submit" name="Login" value="Login">
+    </div> 
+  </div> -->
+
   <div>
 
   </div>
