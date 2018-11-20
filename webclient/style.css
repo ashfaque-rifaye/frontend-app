@@ -1,5 +1,4 @@
-
-
+/* BODY DEFAULT */ 
 body{
     margin :0;
     padding : 0;
@@ -7,6 +6,16 @@ body{
 }
 
 
+
+.text{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #E9EBF1
+}
+
+
+
+/* Background Styling */
 .pageLayout{
     height : 100vh;
     width: 100%;
@@ -19,21 +28,23 @@ body{
     filter: hue-rotate(60deg);*/
 }
 
-.text{
-  font-size: 20px;
-  font-family: sans-serif;
-  color: #E9EBF1
+
+
+.navbarList{
+  /*background-color: #DDDCE0;*/
+  float : right;
+  /*background-image: linear-gradient(#AD0AAB,#4568DC, #B06AB3, #00A032);*/
+  /*background-image: radial-gradient(circle at bottom right, #AD0AAB,#4568DC, #B06AB3, #00A032);*/
+   /*linear-gradient(#4568DC, #B06AB3);*/  /*other option #FC466B, #3F5EFB)*/  /*linear-gradient(#AD0CFF, #00A032)*/
+  opacity : 0.7;
+  width : 15%;
+  position: relative;
+  top: 10%;
+  visibility: hidden;
 }
 
-/*ul{
-    margin: 0;
-    padding: 0;
-}*/
-/*
-.navbarList :: before{
-  display: none;
-}
-*/
+
+/*Apply CSS for all ul's with .navbarList Class*/
 .navbarList ul{
   font-size: 16px;
   font-family: Trebuchet MS;
@@ -45,49 +56,47 @@ body{
 
 
 
-.navbarList{
-/*  width : 150px;
-  height : 100%;*/
-  /*background-color: #DDDCE0;*/
-  float : right;
-  /*background-image: linear-gradient(#AD0AAB,#4568DC, #B06AB3, #00A032);*/
-  /*background-image: radial-gradient(circle at bottom right, #AD0AAB,#4568DC, #B06AB3, #00A032);*/
-   /*linear-gradient(#4568DC, #B06AB3);*/  /*other option #FC466B, #3F5EFB)*/  /*linear-gradient(#AD0CFF, #00A032)*/
-  opacity : 0.7;
-  width : 15%;
-  position: relative;
-  top: 10%;
-  visibility: hidden;
-
-
-
-}
-
-
-
-
 li {
 
   display: block;
   padding: 5%;
 
+
 }
 
 li a {
   padding: 5px;
+  display: inline-block;
 }
 
 li a:hover {
   /*background-color: #185a9d;
   color : #43cea2;*/
-  -webkit-transition: color 200ms ease-out;
-  -moz-transition: color 200ms ease-out;
-  -o-transition: color 200ms ease-out;  
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;  
   transition: all 200ms ease-out;
   /*background-color: #e0eafc; /*eef2f3*/
   color : #ffffff;/*#4bc0c8;*/
-  opacity : 0.5;
   cursor: pointer;
+  opacity: 0.5;
+
+}
+
+.line::after {
+  /*-webkit-box-shadow: 0px 0px 10px 5px #ffffff;*/
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.25px;
+  background: #000;
+  transition: width .3s;
+
+
+}
+
+.line:hover::after{
+  width: calc(100% - 30px) ;
 }
 /*-all is specified so as to transition the elements in this specific css class.*/
 
@@ -108,64 +117,11 @@ li a.nav-menu{
   align-content: left;
 
   visibility: visible;
-  padding-right: 26px;
-  padding-top: 16px;
+  padding-right: 0px;
+  padding-top: 25px;
 
 }
 
-
-
-/*<div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-*/
-.collapsable-button{
-  background-image: url("images/nav-icon.png");
-  float: right;
-  background-size: 35px;
-  display: block;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 50px;
-  width:50px;
-  align-content: left;
-  cursor: pointer;
-  visibility: visible;
-  opacity : 1;
-/*  margin: -20px 65%;
-*/
-}
-
-.collapsable-button:hover{
-    background-color: #AB47BC;
-
-}
-
-
-
-/*.nav-menu.active{
-  opacity: 0.5;
-}*/
-
-
-.login-form{
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  background: #ffffff;
-
-  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
-  box-shadow: 0px 0px 10px 5px #ffffff;
-  transform: translate(50%,50%) ;
-
-}
-
-.login-form h2{
-  text-align: center;
-}
-
-.form-input{
-  padding: 10px 0px 0px 0px;
-}
 
 .material-icons.md-36 { 
 
@@ -174,26 +130,79 @@ li a.nav-menu{
   padding : 5px;
   border-radius: 30%;
   color: rgba(26, 26, 26, 0.99);
+  margin-left: 5px;
+
+}
+
+.material-icons.md-36:hover { 
+
   cursor: pointer;
-
-}
-
-.material-icons.md-36 :hover{ 
-
-  opacity : 0.5;
+  -webkit-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
+  -moz-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
+  -o-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);  
+  transition: all 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
   -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+
 }
-/*.collapsable-button:hover{
-  left : 0%;
-  display :none;
-}*/
-/*.collapsable-button.active:  ~ .navbarList{
-  display :none;
+
+
+/* Form -Styling */
+
+.login-form{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background: #ffffff;
+/*  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+*//*  box-shadow: 0px 0px 10px 5px #ffffff;
+*/  transform: translate(-50%,-50%) ;
+  border-radius: 20px;
+    text-align: center;
+
+
+
 }
-*/
+
+.login-form h2{
+  text-align: center;
+  font-family: Palatino Linotype;
+
+}
+
+.form-input{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+
+}
+
+.input-text-login{
+    border: 1px solid #bababa;
+    border-radius: 4px;
+    border-width: 40%;
+    border-spacing: 4px;
+    font-size: 16px;
+    font-family: Palatino Linotype;
+    padding: 3px;
+
+
+}
 
 
 
+.input-text-login:focus{
+    border: 1px solid #00bafa;
+    border-radius: 4px;
+
+
+}
+
+
+.submit-button{
+  text-align: center;
+
+}
 
 
 /*
@@ -213,3 +222,37 @@ li a.nav-menu{
 
     display: flex;
 } */
+/*
+
+
+/*<div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+.collapsable-button{
+  background-image: url("images/nav-icon.png");
+  float: right;
+  background-size: 35px;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width:50px;
+  align-content: left;
+  cursor: pointer;
+  visibility: visible;
+  opacity : 1;
+/*  margin: -20px 65%;
+
+}
+
+.collapsable-button:hover{
+    background-color: #AB47BC;
+
+}
+*/
+
+
+/*.nav-menu.active{
+  opacity: 0.5;
+}*/
+
