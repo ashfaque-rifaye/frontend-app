@@ -29,7 +29,7 @@
         <ul>
           <li><a class = "nav-menu" onclick="onToggleMenu()"></a></li>
           <li><a class = "defaultSelect line">Home<i class="material-icons md-36">home</i></a></li>
-          <li><a class = "line">Login<i class="material-icons md-36">person</i></a></li>
+          <li><a class = "line" onclick="openLoginPopup()">Login<i class="material-icons md-36">person</i></a></li>
           <li><a class = "line">About Us<i class="material-icons md-36">work</i></a></li>
           <li><a class = "line">Blog<i class="material-icons md-36">rss_feed</i></a></li>
           <li><a class = "line">Contact<i class="material-icons md-36">library_books</i></a></li>
@@ -38,15 +38,19 @@
       </div>
   
   <div class = "login-form">
-    <h2> Login </h2>
+    <h2 id="login" onclick = "toggleLoginSignUpTab('Login')"> Login </h2>
+    <h2 id ="signUp" onclick = "toggleLoginSignUpTab('SignUp')"> Sign Up </h2>
+    <div class = "form-input">
+      <input class = "input-text-login" type="text" name="Username" placeholder="Username">
+    </div>
     <div class = "form-input">
       <input class = "input-text-login" type="text" name="Email" placeholder="Email">
     </div>
     <div class = "form-input">
       <input class = "input-text-login" type="password" name="Password" placeholder="Password">
     </div>  
-    <div class = "form-input">
-      <input class = "submit-button" type="submit" name="Login" value="Sign In">
+    <div >
+      <button class = "submit-button" type="submit" name="Login-SignUp-Button"><span>Sign In</span></button>
     </div> 
   </div> 
 

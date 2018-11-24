@@ -1,3 +1,5 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css?family=Amiri|Arvo|Bangers|Bree+Serif|Cormorant|Courgette|Fredoka+One|Fugaz+One|Gurajada|Indie+Flower|Kaushan+Script|Lemon|Lemonada|Mali|Montserrat|Neucha|Oleo+Script+Swash+Caps|Permanent+Marker|Quicksand:500|Salsa|Sedgwick+Ave|Spicy+Rice');
 /* BODY DEFAULT */ 
 body{
     margin :0;
@@ -47,7 +49,7 @@ body{
 /*Apply CSS for all ul's with .navbarList Class*/
 .navbarList ul{
   font-size: 16px;
-  font-family: Trebuchet MS;
+  font-family:  'Salsa', cursive;
   color: white;   
   display: block;
   text-align: right;
@@ -107,6 +109,7 @@ li a.defaultSelect{
 }
 
 
+
 li a.nav-menu{
   background-image: url("images/nav-icon.png");
   background-size: 28px;
@@ -148,24 +151,19 @@ li a.nav-menu{
 
 /* Form -Styling */
 
+
+
+
 .login-form{
   top: 50%;
   left: 50%;
   position: absolute;
   background: #ffffff;
-/*  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
-*//*  box-shadow: 0px 0px 10px 5px #ffffff;
-*/  transform: translate(-50%,-50%) ;
+  transform: translate(-50%,-50%) ;
   border-radius: 20px;
-    text-align: center;
-
-
-
-}
-
-.login-form h2{
+  box-shadow: 6px 0px 20px -3px rgba(26, 26, 26, 0.99);
+  display: none;
   text-align: center;
-  font-family: Palatino Linotype;
 
 }
 
@@ -177,17 +175,76 @@ li a.nav-menu{
 
 }
 
+.login-form h2{
+  font-family: 'Salsa', cursive;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100px;
+  height: 36px;
+  font-size: 22px;
+  background-color: #e4f2e669; /*#dddce0*/
+  border-bottom: 2px solid #e9ebf1;
+
+}
+
+
+.login-form h2:hover:nth-child(1), #login.active{
+
+
+    padding-right: 5px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.4);
+    background-color: springgreen;
+    /* padding-right: 0px; */
+    transition: padding 300ms cubic-bezier(0.14, 0.86, 0.71, 1.29);
+    /* padding-right: 0px; */
+}
+
+
+
+.login-form h2:hover:nth-child(2), #signUp.active{
+
+
+    padding-left: 5px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.4);
+    background-color: springgreen;
+    /* padding-right: 0px; */
+    transition: padding 300ms cubic-bezier(0.14, 0.86, 0.71, 1.29);
+    /* padding-right: 0px; */
+}
+
+#login{
+  border-top-left-radius: 20px;
+  cursor: pointer;
+
+}
+
+#signUp{
+  border-top-right-radius: 20px;
+  cursor: pointer;
+}
+
+
+
 .input-text-login{
     border: 1px solid #bababa;
     border-radius: 4px;
     border-width: 40%;
     border-spacing: 4px;
-    font-size: 16px;
     font-family: Palatino Linotype;
-    padding: 3px;
+    padding: 5px;
 
 
 }
+
 
 
 
@@ -200,10 +257,47 @@ li a.nav-menu{
 
 
 .submit-button{
-  text-align: center;
+    text-align: center;
+    position: relative;
+    padding: 3px;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+    font-size: 20px;
+    width: 50%;
+    margin: 15px;
+    cursor: pointer;
+    background-color: springgreen;
+    border: none;
+    outline: none;
+    content: '0';
+    transition: 0.2 ease-out;
+
 
 }
 
+.submit-button:hover{
+  padding-right: 20px;
+  transition: all 0.2s ease-out;
+}
+
+.submit-button span{
+  position: relative;
+  transition: 0.5s;
+    cursor: pointer;
+  display: inline-block;
+}
+.submit-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -25px;
+  transition: 0.5s;
+}
+.submit-button:hover span:after {
+  opacity: 1;
+  right: -20px;
+}
 
 /*
 .firstElement{
