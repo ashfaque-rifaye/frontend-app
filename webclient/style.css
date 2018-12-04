@@ -1,5 +1,7 @@
 /*Imports*/
 @import url('https://fonts.googleapis.com/css?family=Amiri|Arvo|Bangers|Bree+Serif|Cormorant|Courgette|Fredoka+One|Fugaz+One|Gurajada|Indie+Flower|Kaushan+Script|Lemon|Lemonada|Mali|Montserrat|Neucha|Oleo+Script+Swash+Caps|Permanent+Marker|Quicksand:500|Salsa|Sedgwick+Ave|Spicy+Rice');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
 /* BODY DEFAULT */ 
 body{
     margin :0;
@@ -50,6 +52,7 @@ body{
 .navbarList ul{
   font-size: 16px;
   font-family:  'Salsa', cursive;
+  font-weight: 300;
   color: white;   
   display: block;
   text-align: right;
@@ -69,19 +72,22 @@ li {
 li a {
   padding: 5px;
   display: inline-block;
+  cursor: pointer;
 }
 
 li a:hover {
   /*background-color: #185a9d;
   color : #43cea2;*/
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;  
-  transition: all 200ms ease-out;
+  -webkit-transition: color 200ms ease-out;
+  -moz-transition: color 200ms ease-out;
+  -o-transition: color 200ms ease-out;  
+  transition: color 200ms ease-out;
   /*background-color: #e0eafc; /*eef2f3*/
-  color : #ffffff;/*#4bc0c8;*/
-  cursor: pointer;
-  opacity: 0.5;
+  /*color : #ffffff;/*#4bc0c8;*/
+  font-weight: 900;
+
+  color: springgreen;
+  /*opacity: 0.5;*/
 
 }
 
@@ -103,12 +109,17 @@ li a:hover {
 /*-all is specified so as to transition the elements in this specific css class.*/
 
 
-li a.defaultSelect{
-  color : #ffffff;/*#4bc0c8;*/
-  opacity : 0.5;
+li a.defaultSelect {
+  color : springgreen;/*#4bc0c8;*/
+  font-weight: bolder;
+  /*opacity : 0.5;*/
 }
 
+.defaultIconSelect{
+  background-color: springgreen;
+  -webkit-box-shadow: 2px 2px 5px 1px;
 
+}
 
 li a.nav-menu{
   background-image: url("images/nav-icon.png");
@@ -137,14 +148,15 @@ li a.nav-menu{
 
 }
 
-.material-icons.md-36:hover { 
+.material-icons.md-36:hover, li a:hover > .material-icons.md-36{ 
 
   cursor: pointer;
   -webkit-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
   -moz-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
   -o-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);  
   transition: all 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
-  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+  -webkit-box-shadow: 2px 2px 5px 1px;
+  background-color: springgreen;
 
 }
 
@@ -168,10 +180,7 @@ li a.nav-menu{
 }
 
 .form-input{
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
+    padding-top: 40px;
 
 }
 
@@ -182,7 +191,7 @@ li a.nav-menu{
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
-  width: 100px;
+  width: 120px;
   height: 36px;
   font-size: 22px;
   background-color: #e4f2e669; /*#dddce0*/
@@ -241,11 +250,13 @@ li a.nav-menu{
     border-spacing: 4px;
     font-family: Palatino Linotype;
     padding: 5px;
-
+    width: 200px;
 
 }
 
-
+.input-icon {
+    margin-left: -20px;
+}
 
 
 .input-text-login:focus{
@@ -271,6 +282,7 @@ li a.nav-menu{
     outline: none;
     content: '0';
     transition: 0.2 ease-out;
+    text-transform: uppercase;
 
 
 }

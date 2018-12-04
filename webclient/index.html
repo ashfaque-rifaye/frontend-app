@@ -28,7 +28,7 @@
       <div class="navbarList" >
         <ul>
           <li><a class = "nav-menu" onclick="onToggleMenu()"></a></li>
-          <li><a class = "defaultSelect line">Home<i class="material-icons md-36">home</i></a></li>
+          <li><a class = "defaultSelect line">Home<i class="defaultIconSelect material-icons md-36">home</i></a></li>
           <li><a class = "line" onclick="openLoginPopup()">Login<i class="material-icons md-36">person</i></a></li>
           <li><a class = "line">About Us<i class="material-icons md-36">work</i></a></li>
           <li><a class = "line">Blog<i class="material-icons md-36">rss_feed</i></a></li>
@@ -39,18 +39,23 @@
   
   <div class = "login-form">
     <h2 id="login" onclick = "toggleLoginSignUpTab('Login')"> Login </h2>
-    <h2 id ="signUp" onclick = "toggleLoginSignUpTab('SignUp')"> Sign Up </h2>
-    <div class = "form-input">
-      <input class = "input-text-login" type="text" name="Username" placeholder="Username">
+    <h2 id ="signUp" onclick = "toggleLoginSignUpTab('SignUp')"> Register </h2>
+    <div>
+        <span style="font-weight: bold"> Welcome Back! </span>
+        <span style="text-align: center;display: block"> Glad to see you again. </span>        
     </div>
     <div class = "form-input">
-      <input class = "input-text-login" type="text" name="Email" placeholder="Email">
+      <input class = "input-text-login" type="text" name="Username" placeholder="Username"/><i name="user"class="input-icon fas fa-user"></i>
     </div>
     <div class = "form-input">
-      <input class = "input-text-login" type="password" name="Password" placeholder="Password">
+      <input class = "input-text-login" type="text" name="Email" placeholder="Email"/><i class="input-icon fas fa-envelope"></i>
+    </div>
+    <div class = "form-input">
+      <input class = "input-text-login" type="password" name="Password" placeholder="Password"/><i class="input-icon fas fa-key" ></i>
     </div>  
-    <div >
-      <button class = "submit-button" type="submit" name="Login-SignUp-Button"><span>Sign In</span></button>
+    <div>
+      <button class = "submit-button" type="submit" for="SignUp-Button"><span>Sign Up</span></button>
+      <button class = "submit-button" type="submit" for="Login-Button"><span>Login In</span></button>
     </div> 
   </div> 
 

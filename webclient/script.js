@@ -15,10 +15,21 @@ function toggleLoginSignUpTab(event){
 	if(event==='Login'){
 		document.getElementById('login').classList.toggle('active');
 		document.getElementsByClassName('input-text-login').Username.style.display = "none";
+		document.getElementsByClassName('input-icon').user.style.display = "none";
+		document.getElementsByClassName('form-input')[0].style.paddingTop = "0px";
+		document.getElementsByTagName('button')[0].style.visibility ="hidden";
+		document.getElementsByTagName('button')[1].style.visibility ="visible";
+
+	
 
 	}else{
 		document.getElementById('signUp').classList.toggle('active');
 		document.getElementsByClassName('input-text-login').Username.style.display = "inline";
+		document.getElementsByClassName('input-icon').user.style.display = "inline";
+		document.getElementsByClassName('form-input')[0].style.paddingTop = "40px";
+		document.getElementsByTagName('button')[1].style.visibility ="hidden";
+		document.getElementsByTagName('button')[0].style.visibility ="visible";
+
 	}
 	
 }
@@ -31,6 +42,10 @@ function openLoginPopup() {
 			
 		document.getElementsByClassName('login-form')[0].style.display = "block";
 		document.getElementById('login').classList.toggle('active');
+		document.getElementsByClassName('input-text-login').Username.style.display = "none";
+		document.getElementsByClassName('input-icon').user.style.display = "none";
+		document.getElementsByClassName('form-input')[0].style.paddingTop = "0px";
+		document.getElementsByTagName('button')[0].style.visibility ="hidden";
 
 	}
 	else{
