@@ -20,14 +20,23 @@
 </head>
 
 <body>
+  
+
 
     <div class="pageLayout"></div>
-<!--       <div class="collapsable-button" onclick="onToggleMenu()" >
-      
+
+    <div class = "test-div">
+       <div class = "ham-menu" onclick="onToggleMenu()"> </div>
+          <div class = "close-icon" >
+          </div>
+    </div>
+    <!--Navigation Bar Components -->
+    <!-- <div class = "hamburger-menu">
+      <div class = "menu-icon">
       </div> -->
       <div class="navbarList" >
         <ul>
-          <li><a class = "nav-menu" onclick="onToggleMenu()"></a></li>
+          <!-- <li><a class = "hamburger-menu" onclick="onToggleMenu()"></a></li> -->
           <li><a class = "defaultSelect line">Home<i class="defaultIconSelect material-icons md-36">home</i></a></li>
           <li><a class = "line" onclick="openLoginPopup()">Login<i class="material-icons md-36">person</i></a></li>
           <li><a class = "line">About Us<i class="material-icons md-36">work</i></a></li>
@@ -36,15 +45,18 @@
           <li><a class = "line">Edit Profile<i class="material-icons md-36">edit</i></a></li>
         </ul>
       </div>
+    </div>
   
+  <!-- Login and Sign Up Popup - With Tabs -->
+  <div><i style="text-align: center" class="fas fa-backspace"></i></div>
   <div class = "login-form">
     <h2 id="login" onclick = "toggleLoginSignUpTab('Login')"> Login </h2>
     <h2 id ="signUp" onclick = "toggleLoginSignUpTab('SignUp')"> Register </h2>
-    <div>
-        <span style="font-weight: bold"> Welcome Back! </span>
-        <span style="text-align: center;display: block"> Glad to see you again. </span>        
+    <div style = "padding-top: 20px;">
+        <span style="font-weight: bold; font-family: 'Courgette', cursive;"> Welcome Back! </span>
+        <span style="text-align: center;display: block; font-family: 'Courgette'"> Glad to see you again. </span>        
     </div>
-    <div class = "form-input">
+    <div class = "form-input" >
       <input class = "input-text-login" type="text" name="Username" placeholder="Username"/><i name="user"class="input-icon fas fa-user"></i>
     </div>
     <div class = "form-input">
@@ -52,11 +64,27 @@
     </div>
     <div class = "form-input">
       <input class = "input-text-login" type="password" name="Password" placeholder="Password"/><i class="input-icon fas fa-key" ></i>
+    </div>
+    <div class = "form-input">
+      <input type="checkbox" name="Password"/> Remember Me
     </div>  
-    <div>
+    <div id = 'signUpButton'>
       <button class = "submit-button" type="submit" for="SignUp-Button"><span>Sign Up</span></button>
+    </div>
+    <div id = 'loginButton'>
       <button class = "submit-button" type="submit" for="Login-Button"><span>Login In</span></button>
-    </div> 
+    </div>
+    <div class="strike"> <span class="strike-line"> OR </span></div>
+    <div style = "padding-top:10px;">SIGN IN WITH</div>
+    <div>
+      <i class="social-media-icons fab fa-google"></i>
+      <i class="social-media-icons fab fa-twitter"></i>
+      <i class="social-media-icons fab fa-facebook-f"></i>
+      <i class="social-media-icons fab fa-linkedin-in"></i>
+
+    </div>
+    <div> <span ><a>Forgot Your Password?</a></span> 
+
   </div> 
 
   <div>
