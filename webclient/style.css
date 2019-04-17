@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Amiri|Arvo|Bangers|Bree+Serif|Cormorant|Courgette|Fredoka+One|Fugaz+One|Gurajada|Indie+Flower|Kaushan+Script|Lemon|Lemonada|Mali|Montserrat|Neucha|Oleo+Script+Swash+Caps|Permanent+Marker|Quicksand:500|Salsa|Sedgwick+Ave|Spicy+Rice');
 @import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
 /* BODY DEFAULT */ 
 body{
     margin :0;
@@ -46,6 +53,7 @@ body{
   top: 10%;
   position: relative;
   visibility: hidden;
+  transition: all 10s ease-out;
 }
 
 /*Apply CSS for all ul's with .navbarList Class*/
@@ -53,11 +61,10 @@ body{
   font-size: 16px;
   font-family:  'Salsa', cursive;
   font-weight: 300;
-  color: white;   
+  color: #ffffff;   
   display: block;
   text-align: right;
-  position: absolute;
-  margin: 40% 16px 0px 75px;
+  margin: 50px 12px 0px 0px;
   padding: 0px;
 
 }
@@ -78,17 +85,18 @@ li a {
   cursor: pointer;
 }
 
+
 li a:hover {
   /*background-color: #185a9d;
   color : #43cea2;*/
-  -webkit-transition: color 200ms ease-out;
-  -moz-transition: color 200ms ease-out;
-  -o-transition: color 200ms ease-out;  
-  transition: color 200ms ease-out;
+  -webkit-transition: color, transform 200ms ease-out;
+  -moz-transition: color, transform 200ms ease-out;
+  -o-transition: color, transform 200ms ease-out;  
+  transition: color, transform 200ms ease-out;
   /*background-color: #e0eafc; /*eef2f3*/
   /*color : #ffffff;/*#4bc0c8;*/
   font-weight: 900;
-
+  transform: translateY(-2px) scale(1);
   color: springgreen;
   /*opacity: 0.5;*/
 
@@ -120,6 +128,7 @@ li a.defaultSelect {
 
 .defaultIconSelect{
   background-color: springgreen;
+  box-shadow: 2px 2px 5px 1px;
   -webkit-box-shadow: 2px 2px 5px 1px;
 
 }
@@ -178,6 +187,7 @@ li a.defaultSelect {
   -moz-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
   -o-transition: color 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);  
   transition: all 200ms cubic-bezier(0.12, 0.65, 0.3, 1.24);
+  box-shadow: 2px 2px 5px 1px;
   -webkit-box-shadow: 2px 2px 5px 1px;
   background-color: springgreen;
 
@@ -215,8 +225,8 @@ li a.defaultSelect {
   margin-top: 0px;
   margin-bottom: 0px;
   width: 120px;
-  height: 36px;
-  font-size: 22px;
+  height: 28px;
+  font-size: 18px;
   background-color: #e4f2e669; /*#dddce0*/
   border-bottom: 2px solid #e9ebf1;
 
@@ -351,7 +361,7 @@ input[type="checkbox"]{
 }
 
 
-.test-div{
+.ham-menu-circle{
     /* To make the curvy right aligned menu bar */
     transform: translate(0%,0%);
     right: 0%;
@@ -436,17 +446,17 @@ input[type="checkbox"]{
 
 
 .strike{
- border-bottom: 1.5px solid rgba(0,0,0,.075);
-  line-height:0.1em;
-  width : 100%;
-
-
-
+    border-bottom: 1.5px solid rgba(0,0,0,.075);
+    line-height: 0.1em;
+    text-align: center;
+    width: 90%;
+    margin: 2px 10px;
 }
 
 .strike .strike-line{
   background:#fff;
-  padding: 10px 0px;
+  padding: 10px 10px;
+  text-transform: lowercase;
   font-family: 'Cormorant';
 }
 
@@ -487,7 +497,17 @@ input[type="checkbox"]{
     border-radius: 5px;
 }
 
+.forgot-pass{
+  text-decoration: none;
+  color: #55ACEE;
+  font-weight: 500;font-family: 'Mali';
+  font-size: 14px;
+}
 
+.checkbox-format{
+  border: none;
+  appearance: none;
+}
 /*.inside-div:before, .inside-div:after {
    content: '';
    height: 5px;
@@ -551,4 +571,10 @@ input[type="checkbox"]{
 /*.nav-menu.active{
   opacity: 0.5;
 }*/
+
+
+
+
+
+
 
